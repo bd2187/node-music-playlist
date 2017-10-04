@@ -11,13 +11,16 @@ function fetchPlaylist() {
   }
 }
 
+function savePlaylist(playlist) {
+  return fs.writeFileSync(jsonPlaylistFile, JSON.stringify(playlist));
+}
+
 function addSong(title, artist) {
   var playlist = fetchPlaylist();
-
   var song = { title, artist };
   playlist.push(song);
 
-  fs.writeFileSync('./playlist/playlist.json', JSON.stringify(playlist));
+  savePlaylist(playlist);
 }
 
 module.exports = {
