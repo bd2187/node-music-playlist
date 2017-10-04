@@ -1,14 +1,18 @@
 const fs = require('fs');
 
-function addSong(title, artist) {
-  var playlist;
+const jsonPlaylistFile = './playlist/playlist.json';
 
+function fetchPlaylist() {
   try {
-    var fetchedPlaylist = fs.readFileSync('./playlist/playlist.json');
-    playlist = JSON.parse(fetchedPlaylist);
+    var playlist = fs.readFileSync(jsonPlaylistFile);
+    return JSON.parse(playlist);
   } catch (err) {
-    playlist = [];
+    return [];
   }
+}
+
+function addSong(title, artist) {
+  var playlist = fetchPlaylist();
 
   var song = { title, artist };
   playlist.push(song);
