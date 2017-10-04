@@ -2,21 +2,18 @@ const fs = require('fs');
 const argv = require('yargs').argv;
 
 const methods = require('./playlist');
-const { addSong } = methods;
+const { addSong, removeSong } = methods;
 const commandConstants = require('./constants');
 const { add, remove, play, list } = commandConstants;
 
 const userCommand = argv._[0];
 
-// console.log(addSong, methods);
-
 switch (userCommand) {
   case add:
-    console.log('add song');
     addSong(argv.title, argv.artist);
     break;
   case remove:
-    console.log('remove song');
+    removeSong(argv.title, argv.artist);
     break;
   case play:
     console.log('play song');
