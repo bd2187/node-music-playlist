@@ -2,7 +2,7 @@ const fs = require('fs');
 const argv = require('yargs').argv;
 
 const methods = require('./playlist');
-const { addSong, removeSong, playSong } = methods;
+const { addSong, removeSong, playSong, listAllSongs } = methods;
 const commandConstants = require('./constants');
 const { add, remove, play, list } = commandConstants;
 
@@ -19,7 +19,7 @@ switch (userCommand) {
     playSong(argv.title, argv.artist);
     break;
   case list:
-    console.log('list all songs');
+    listAllSongs();
     break;
   default:
     console.log('Sorry, command not recognized');
