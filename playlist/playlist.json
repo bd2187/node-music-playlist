@@ -1,1 +1,8 @@
-[{"title":"You Belong With Me","artist":"Taylor Swift"},{"title":"You Belong With Me","artist":"Taylor Swift"},{"title":"Love Story","artist":"Taylor Swift"},{"title":"All Too Well","artist":"Taylor Swift"}]
+[
+  { "title": "You Belong With Me", "artist": "Taylor Swift" },
+  { "title": "You Belong With Me", "artist": "Taylor Swift" },
+  { "title": "All Too Well", "artist": "Taylor Swift" },
+  { "title": "Look What You Made Me Do", "artist": "Taylor Swift" },
+  { "title": "Are You Ready For It", "artist": "Taylor Swift" },
+  { "title": "Today Was a Fairytale", "artist": "Taylor Swift" }
+]
